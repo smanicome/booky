@@ -1,0 +1,10 @@
+.env
+out/
+**/__pycache__/
+*.pyc
+.venv/
+.idea/
+datasets/
+.claude/
+.DS_Store
+

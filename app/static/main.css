@@ -1,0 +1,184 @@
+:root {
+    --text:       #100c12;
+    --background: #f9f7fb;
+    --primary:    #8e57af;
+    --secondary:  #be97d5;
+    --accent:     #ad71d1;
+
+    --border:          #e4d9ed;
+    --border-hover:    var(--secondary);
+    --surface:         #ffffff;
+    --surface-subtle:  #f4eef9;
+    --text-muted:      #6d5880;
+    --text-faint:      #9e87b0;
+}
+
+/* ── Typography ───────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css?family=Rambla:400,700');
+
+html { font-size: 100%; }
+
+html, body, [class*="css"] {
+    font-family: 'Rambla', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Rambla', sans-serif;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+h1 { font-size: 3rem !important; }
+h2 { font-size: 2.5rem !important; }
+h3 { font-size: 2rem !important; }
+h4 { font-size: 1.777rem !important; }
+h5 { font-size: 1.333rem !important; }
+
+small { font-size: 0.750rem; }
+
+/* ── Site header ──────────────────────────────────────────────────────── */
+.site-header {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.5rem 0 1.25rem;
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 1.75rem;
+}
+
+.site-header-img {
+    height: 2.8rem;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.site-header-text {
+    height: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.1rem;
+}
+
+.site-header-logo {
+    font-family: 'Rambla', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    padding-top: 0.5rem;
+}
+
+.site-header-tagline {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+}
+
+/* ── Metric cards ─────────────────────────────────────────────────────── */
+[data-testid="metric-container"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 22px !important;
+    box-shadow: 0 1px 4px rgba(16, 12, 18, 0.05);
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+[data-testid="metric-container"]:hover {
+    box-shadow: 0 4px 16px rgba(142, 87, 175, 0.12);
+    border-color: var(--border-hover);
+}
+
+[data-testid="stMetricLabel"] {
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.07em !important;
+    text-transform: uppercase !important;
+    color: var(--text-muted) !important;
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 1.65rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+}
+
+[data-testid="stMetricDelta"] svg {
+    vertical-align: middle;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    border-right: 1px solid var(--border) !important;
+}
+
+[data-testid="stSidebar"] h2 {
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: var(--text-faint) !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* ── Expander ─────────────────────────────────────────────────────────── */
+[data-testid="stExpander"] {
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+}
+
+[data-testid="stExpander"] summary {
+    font-weight: 500 !important;
+}
+
+/* ── Dividers ─────────────────────────────────────────────────────────── */
+hr {
+    border: none !important;
+    border-top: 1px solid var(--border) !important;
+    margin: 1rem 0 !important;
+}
+
+/* ── Caption text ─────────────────────────────────────────────────────── */
+[data-testid="stCaptionContainer"] p {
+    color: var(--text) !important;
+    font-size: 0.82rem !important;
+    line-height: 1.6 !important;
+}
+
+/* ── Plotly charts ────────────────────────────────────────────────────── */
+[data-testid="stPlotlyChart"] > div {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* ── Dataframe ────────────────────────────────────────────────────────── */
+[data-testid="stDataFrame"] {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border) !important;
+}
+
+/* ── Selectbox / radio ────────────────────────────────────────────────── */
+[data-testid="stSelectbox"] label,
+[data-testid="stRadio"] label {
+    font-weight: 500 !important;
+    font-size: 0.85rem !important;
+}
+
+/* ── Top app bar ──────────────────────────────────────────────────────── */
+[data-testid="stHeader"] {
+    background: rgba(249, 247, 251, 0.85) !important;
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border) !important;
+}
+
+/* ── Layout spacing ───────────────────────────────────────────────────── */
+[data-testid="block-container"] {
+    padding-top: 2rem !important;
+    padding-bottom: 3rem !important;
+}
